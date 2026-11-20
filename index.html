@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Coto Studio — Technical mentorship" data-title-es="Coto Studio — Mentoría técnica" data-desc-en="Technical mentorship for entrepreneurs building their own website or app. You build it and keep everything. Security in every session." data-desc-es="Mentoría técnica para emprendedores que arman su propio sitio o aplicación. Vos lo construís y te quedás con todo. Seguridad en cada sesión.">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>Coto Studio — Technical mentorship</title>
+    <meta name="description" content="Technical mentorship for entrepreneurs building their own website or app. You build it and keep everything. Security in every session.">
+    <link rel="canonical" href="https://studio.coto.lat/">
+    <meta property="og:title" content="Coto Studio — Technical mentorship">
+    <meta property="og:site_name" content="Coto Studio">
+    <meta name="application-name" content="Coto Studio">
+    <meta property="og:description" content="Technical mentorship for entrepreneurs building their own website or app. You build it and keep everything. Security in every session.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studio.coto.lat/">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="es">
+    <meta property="og:image" content="https://studio.coto.lat/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Coto Studio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coto Studio — Technical mentorship">
+    <meta name="twitter:description" content="Technical mentorship for entrepreneurs building their own website or app. You build it and keep everything. Security in every session.">
+    <meta name="twitter:image" content="https://studio.coto.lat/og.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="fonts/inter-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get("lang");
+        var stored = null;
+        try { stored = localStorage.getItem("lang"); } catch (e) {}
+        var nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+        var lang = q === "en" || q === "es" ? q : stored === "en" || stored === "es" ? stored : nav.indexOf("es") === 0 ? "es" : "en";
+        if (q === "en" || q === "es") {
+          try { localStorage.setItem("lang", q); } catch (e) {}
+        }
+        root.lang = lang;
+        root.setAttribute("data-lang", lang);
+        var title = root.getAttribute(lang === "es" ? "data-title-es" : "data-title-en");
+        var desc = root.getAttribute(lang === "es" ? "data-desc-es" : "data-desc-en");
+        if (title) document.title = title;
+        var meta = document.querySelector('meta[name="description"]');
+        if (meta && desc) meta.setAttribute("content", desc);
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle && title) ogTitle.setAttribute("content", title);
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc && desc) ogDesc.setAttribute("content", desc);
+        var ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogLocale) ogLocale.setAttribute("content", lang === "es" ? "es" : "en");
+        var ogAlt = document.querySelector('meta[property="og:locale:alternate"]');
+        if (ogAlt) ogAlt.setAttribute("content", lang === "es" ? "en" : "es");
+        var twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle && title) twTitle.setAttribute("content", title);
+        var twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc && desc) twDesc.setAttribute("content", desc);
+      })();
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"Coto Studio","url":"https://studio.coto.lat/","description":"Technical mentorship for entrepreneurs building their own website or app. You build it and keep everything.","provider":{"@type":"Organization","name":"Coto Studio","url":"https://studio.coto.lat/"}}
+    </script>
+  </head>
+  <body>
+    <a class="skip lang-en" href="#about">Skip to what it is</a>
+    <a class="skip lang-es" href="#about">Saltar a qué es</a>
+    <header class="bar">
+      <a class="brand" href="./">Coto Studio</a>
+      <nav class="lang-switch" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        <span class="sep" aria-hidden="true">/</span>
+        <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="hero-tag">
+            <span class="lang-en">Technical mentorship</span>
+            <span class="lang-es">Mentoría técnica</span>
+          </p>
+          <h1>
+            <span class="lang-en">Build it<br>yourself</span>
+            <span class="lang-es">Armalo<br>vos</span>
+          </h1>
+        </div>
+        <div class="hero-aside">
+          <div class="hero-mark" aria-hidden="true">
+            <svg class="asterisk" viewBox="0 0 64 64" fill="none">
+              <path d="M32 10v44M12.95 21.05l38.1 21.9M12.95 42.95l38.1-21.9" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="lede">
+            <span class="lang-en">Technical mentorship for entrepreneurs building their own website or app, including with AI. You build it and keep everything.</span>
+            <span class="lang-es">Mentoría técnica para emprendedores que arman su propio sitio o aplicación, también con IA. Vos lo construís y te quedás con todo.</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="situations" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading"><span class="lang-en">What it is</span><span class="lang-es">Qué es</span></h2>
+        <p class="lede">
+          <span class="lang-en">Step-by-step guidance while you implement the advanced parts. Security is included in every session.</span>
+          <span class="lang-es">Guía paso a paso mientras implementás lo avanzado. La seguridad entra en cada sesión.</span>
+        </p>
+        <ul>
+          <li>
+            <span class="idx" aria-hidden="true">01</span>
+            <p class="ask">
+              <span class="lang-en">Forms that email you and send the client a confirmation</span>
+              <span class="lang-es">Formularios que te llegan por correo y le mandan confirmación al cliente</span>
+            </p>
+          </li>
+          <li>
+            <span class="idx" aria-hidden="true">02</span>
+            <p class="ask">
+              <span class="lang-en">Authentication for private sections</span>
+              <span class="lang-es">Autenticación para secciones privadas</span>
+            </p>
+          </li>
+          <li>
+            <span class="idx" aria-hidden="true">03</span>
+            <p class="ask">
+              <span class="lang-en">AI inside the site</span>
+              <span class="lang-es">IA dentro del sitio</span>
+            </p>
+          </li>
+          <li>
+            <span class="idx" aria-hidden="true">04</span>
+            <p class="ask">
+              <span class="lang-en">Backend</span>
+              <span class="lang-es">Backend</span>
+            </p>
+          </li>
+        </ul>
+        <p class="boundary">
+          <span class="lang-en">You do the building, and you keep the site or the app. Coto Studio does not build it for you.</span>
+          <span class="lang-es">Vos lo construís y te lo quedás. Coto Studio no te lo arma.</span>
+        </p>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading"><span class="lang-en">Services</span><span class="lang-es">Servicios</span></h2>
+
+        <article class="service" id="session">
+          <header class="service-head">
+            <h3><span class="idx" aria-hidden="true">01</span><span class="lang-en">Technical session</span><span class="lang-es">Sesión técnica</span></h3>
+            <p class="price"><span class="lang-en">From $35</span><span class="lang-es">Desde $35</span></p>
+          </header>
+          <p>
+            <span class="lang-en">1.5 hours with one concrete goal. You leave with the feature working and reviewed for security.</span>
+            <span class="lang-es">1.5 horas con un objetivo concreto. Te vas con la función lista y revisada en seguridad.</span>
+          </p>
+        </article>
+
+        <article class="service" id="guided">
+          <header class="service-head">
+            <h3><span class="idx" aria-hidden="true">02</span><span class="lang-en">Guided build</span><span class="lang-es">Acompañamiento</span></h3>
+            <p class="price"><span class="lang-en">From $120</span><span class="lang-es">Desde $120</span></p>
+          </header>
+          <p>
+            <span class="lang-en">Four sessions to build or improve your site or app, a final security review, and chat support between sessions.</span>
+            <span class="lang-es">Cuatro sesiones para armar o mejorar tu sitio o aplicación, una revisión final de seguridad y soporte por chat entre sesiones.</span>
+          </p>
+        </article>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></h2>
+        <p class="lede">
+          <span class="lang-en">Say what you're building, and whether you want a session or the guided build.</span>
+          <span class="lang-es">Contame qué estás armando, y si querés una sesión o el acompañamiento.</span>
+        </p>
+        <div class="actions">
+          <button type="button" class="action" data-mail>
+            <span class="lang-en">Email</span>
+            <span class="lang-es">Correo</span>
+          </button>
+          <a class="action" data-signal>Signal</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© 2026 Coto Studio</span>
+    </footer>
+    <script src="js/lang.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
