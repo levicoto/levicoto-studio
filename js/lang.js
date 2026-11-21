@@ -34,6 +34,8 @@
     if (twTitle && title) twTitle.setAttribute("content", title);
     var twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc && desc) twDesc.setAttribute("content", desc);
+    var menu = document.querySelector(".top-links");
+    if (menu) menu.setAttribute("aria-label", lang === "es" ? "Secciones" : "Sections");
     if (switcher) {
       switcher.setAttribute("aria-label", lang === "es" ? "Idioma" : "Language");
       var buttons = switcher.querySelectorAll("button");
