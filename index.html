@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-title-en="Coto Studio — Mentorship and turnkey" data-title-es="Coto Studio — Mentoría y llave en mano" data-desc-en="Mentorship while you build your website or app, and turnkey development when you want it built for you. Security included. The result stays in your name." data-desc-es="Mentoría mientras armás tu sitio o aplicación, y desarrollo llave en mano cuando querés que lo construya. Seguridad incluida. El resultado queda a tu nombre.">
+<html lang="en" data-title-en="Coto Studio | Technical advisory for sites and apps" data-title-es="Coto Studio | Asesoría técnica para sitios y apps" data-desc-en="Technical advisory for founders building their site or app, with or without AI. Understand what you build. Security included." data-desc-es="Asesoría técnica para emprendedores que construyen su sitio o app, con o sin IA. Entendé lo que construís. Seguridad incluida.">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="color-scheme" content="dark">
     <meta name="format-detection" content="telephone=no, email=no">
-    <title>Coto Studio — Mentorship and turnkey</title>
-    <meta name="description" content="Mentorship while you build your website or app, and turnkey development when you want it built for you. Security included. The result stays in your name.">
+    <title>Coto Studio | Technical advisory for sites and apps</title>
+    <meta name="description" content="Technical advisory for founders building their site or app, with or without AI. Understand what you build. Security included.">
     <link rel="canonical" href="https://studio.coto.lat/">
-    <meta property="og:title" content="Coto Studio — Mentorship and turnkey">
+    <meta property="og:title" content="Coto Studio | Technical advisory for sites and apps">
     <meta property="og:site_name" content="Coto Studio">
     <meta name="application-name" content="Coto Studio">
-    <meta property="og:description" content="Mentorship while you build your website or app, and turnkey development when you want it built for you. Security included. The result stays in your name.">
+    <meta property="og:description" content="Technical advisory for founders building their site or app, with or without AI. Understand what you build. Security included.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://studio.coto.lat/">
     <meta property="og:locale" content="en">
@@ -22,8 +22,8 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Coto Studio">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Coto Studio — Mentorship and turnkey">
-    <meta name="twitter:description" content="Mentorship while you build your website or app, and turnkey development when you want it built for you. Security included. The result stays in your name.">
+    <meta name="twitter:title" content="Coto Studio | Technical advisory for sites and apps">
+    <meta name="twitter:description" content="Technical advisory for founders building their site or app, with or without AI. Understand what you build. Security included.">
     <meta name="twitter:image" content="https://studio.coto.lat/og.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -65,10 +65,18 @@
         if (twTitle && title) twTitle.setAttribute("content", title);
         var twDesc = document.querySelector('meta[name="twitter:description"]');
         if (twDesc && desc) twDesc.setAttribute("content", desc);
+        var ld = document.querySelector('script[type="application/ld+json"]');
+        if (ld && desc) {
+          try {
+            var data = JSON.parse(ld.textContent);
+            data.description = desc;
+            ld.textContent = JSON.stringify(data);
+          } catch (e) {}
+        }
       })();
     </script>
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"ProfessionalService","name":"Coto Studio","url":"https://studio.coto.lat/","description":"Mentorship while you build your website or app, and turnkey development when you want it built for you. Security included. The result stays in your name.","provider":{"@type":"Organization","name":"Coto Studio","url":"https://studio.coto.lat/"}}
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"Coto Studio","url":"https://studio.coto.lat/","description":"Technical advisory for founders building their site or app, with or without AI. Understand what you build. Security included.","provider":{"@type":"Organization","name":"Coto Studio","url":"https://studio.coto.lat/"}}
     </script>
   </head>
   <body>
@@ -97,36 +105,38 @@
         <div class="hero-main">
           <div class="hero-copy">
             <h1 id="hero-title">
-              <span class="lang-en">In your<br><em>name</em></span>
-              <span class="lang-es">A tu<br><em>nombre</em></span>
+              <span class="lang-en">Build something<br><em>serious</em>.</span>
+              <span class="lang-es">Construí algo<br><em>serio</em>.</span>
             </h1>
             <p class="hero-lede">
-              <span class="lang-en">Mentorship while you build your site or app, including with AI. Turnkey development when you want it built for you.</span>
-              <span class="lang-es">Mentoría mientras armás tu sitio o aplicación, también con IA. Desarrollo llave en mano cuando querés que lo construya.</span>
+              <span class="lang-en">Technical advisory so you understand every part of your site or app.</span>
+              <span class="lang-es">Asesoría técnica para que entendás cada parte de tu sitio o app.</span>
             </p>
-            <a class="hero-btn" href="#contact">
-              <span class="lang-en">Get in touch</span>
-              <span class="lang-es">Escribime</span>
-              <span class="arrow-circle" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none">
-                  <path d="M3.5 8h9M8.5 4.5 12.5 8l-4 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
+            <div class="hero-actions">
+              <a class="hero-btn" href="#contact">
+                <span class="lang-en">Book a session</span>
+                <span class="lang-es">Agendar sesión</span>
+                <span class="arrow-circle" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3.5 8h9M8.5 4.5 12.5 8l-4 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <a class="hero-link" href="#services">
+                <span class="lang-en">See services</span>
+                <span class="lang-es">Ver servicios</span>
+              </a>
+            </div>
           </div>
           <div class="orbits" aria-hidden="true">
             <i></i><i></i><i></i><i></i><i></i>
           </div>
         </div>
         <div class="hero-base">
-          <p class="hero-caption">
-            <span class="lang-en">Two ways to work</span>
-            <span class="lang-es">Dos formas de trabajar</span>
-          </p>
           <ul class="hero-notes">
-            <li><span class="lang-en">Mentorship or turnkey</span><span class="lang-es">Mentoría o llave en mano</span></li>
+            <li><span class="lang-en">Technical advisory</span><span class="lang-es">Asesoría técnica</span></li>
             <li><span class="lang-en">Security included</span><span class="lang-es">Seguridad incluida</span></li>
-            <li><span class="lang-en">In your name</span><span class="lang-es">Todo queda a tu nombre</span></li>
+            <li><span class="lang-en">With or without AI</span><span class="lang-es">Con o sin IA</span></li>
           </ul>
         </div>
       </section>
@@ -135,36 +145,36 @@
       <section class="situations" id="about" aria-labelledby="about-heading">
         <h2 id="about-heading"><span class="lang-en">What it is</span><span class="lang-es">Qué es</span></h2>
         <p class="lede">
-          <span class="lang-en">Mentorship if you are building it yourself. Turnkey development if you want it built for you. Security is included either way, and the result stays in your name.</span>
-          <span class="lang-es">Mentoría si lo estás armando vos. Desarrollo llave en mano si querés que lo construya. La seguridad entra en las dos, y el resultado queda a tu nombre.</span>
+          <span class="lang-en">If you're building your site or app, with code or with AI, I give you the technical guidance to do it right. You learn how each part works and why. Security is built in from the start. If you'd rather I build it, that works too. The project is yours, entirely.</span>
+          <span class="lang-es">Si estás construyendo tu sitio o app, con código o con IA, te doy la guía técnica para hacerlo bien. Aprendés cómo funciona cada parte y por qué. La seguridad va incluida desde el inicio. Si preferís que lo construya yo, también se puede. El proyecto es tuyo, completo.</span>
         </p>
         <ul>
           <li>
             <span class="idx" aria-hidden="true">01</span>
             <p class="ask">
-              <span class="lang-en">Forms that email you and send the client a confirmation</span>
-              <span class="lang-es">Formularios que te llegan por correo y le mandan confirmación al cliente</span>
+              <span class="lang-en">Forms with email alerts</span>
+              <span class="lang-es">Formularios con alertas por correo</span>
             </p>
           </li>
           <li>
             <span class="idx" aria-hidden="true">02</span>
             <p class="ask">
-              <span class="lang-en">Authentication for private sections</span>
-              <span class="lang-es">Autenticación para secciones privadas</span>
+              <span class="lang-en">User authentication</span>
+              <span class="lang-es">Autenticación de usuarios</span>
             </p>
           </li>
           <li>
             <span class="idx" aria-hidden="true">03</span>
             <p class="ask">
-              <span class="lang-en">AI inside the site</span>
-              <span class="lang-es">IA dentro del sitio</span>
+              <span class="lang-en">AI built into your site</span>
+              <span class="lang-es">IA integrada en tu sitio</span>
             </p>
           </li>
           <li>
             <span class="idx" aria-hidden="true">04</span>
             <p class="ask">
-              <span class="lang-en">Backend</span>
-              <span class="lang-es">Backend</span>
+              <span class="lang-en">Backend and databases</span>
+              <span class="lang-es">Backend y bases de datos</span>
             </p>
           </li>
         </ul>
@@ -179,30 +189,30 @@
             <p class="price"><span class="lang-en">From $35</span><span class="lang-es">Desde $35</span></p>
           </header>
           <p>
-            <span class="lang-en">1.5 hours with one concrete goal. You leave with the feature working and reviewed for security.</span>
-            <span class="lang-es">1.5 horas con un objetivo concreto. Te vas con la función lista y revisada en seguridad.</span>
+            <span class="lang-en">Ninety minutes, one concrete goal.</span>
+            <span class="lang-es">Hora y media, un objetivo concreto.</span>
           </p>
         </article>
 
         <article class="service" id="guided">
           <header class="service-head">
-            <h3><span class="idx" aria-hidden="true">02</span><span class="lang-en">Guided build</span><span class="lang-es">Acompañamiento</span></h3>
+            <h3><span class="idx" aria-hidden="true">02</span><span class="lang-en">Guided build</span><span class="lang-es">Construcción guiada</span></h3>
             <p class="price"><span class="lang-en">From $120</span><span class="lang-es">Desde $120</span></p>
           </header>
           <p>
-            <span class="lang-en">Four sessions to build or improve your site or app, a final security review, and chat support between sessions.</span>
-            <span class="lang-es">Cuatro sesiones para armar o mejorar tu sitio o aplicación, una revisión final de seguridad y soporte por chat entre sesiones.</span>
+            <span class="lang-en">Four sessions to build or improve your project, with chat between sessions and a final security review.</span>
+            <span class="lang-es">Cuatro sesiones para construir o mejorar tu proyecto, con chat entre sesiones y revisión final de seguridad.</span>
           </p>
         </article>
 
-        <article class="service" id="turnkey">
+        <article class="service" id="development">
           <header class="service-head">
-            <h3><span class="idx" aria-hidden="true">03</span><span class="lang-en">Turnkey development</span><span class="lang-es">Desarrollo llave en mano</span></h3>
+            <h3><span class="idx" aria-hidden="true">03</span><span class="lang-en">Development</span><span class="lang-es">Desarrollo</span></h3>
             <p class="price"><span class="lang-en">From $50</span><span class="lang-es">Desde $50</span></p>
           </header>
           <p>
-            <span class="lang-en">I build your site or the solution your business needs, from a one-off task to a complete project. Everything is in your name and yours.</span>
-            <span class="lang-es">Yo construyo tu sitio o la solución que tu negocio necesita, desde algo puntual hasta un proyecto completo. Todo queda a tu nombre y es tuyo.</span>
+            <span class="lang-en">I build it, and you understand what you get.</span>
+            <span class="lang-es">Lo construyo yo, y vos entendés lo que recibís.</span>
           </p>
         </article>
       </section>
@@ -210,8 +220,8 @@
       <section class="contact" id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></h2>
         <p class="lede">
-          <span class="lang-en">Say what you need: a session, the guided build, or turnkey development.</span>
-          <span class="lang-es">Contame qué necesitás: una sesión, el acompañamiento o el desarrollo llave en mano.</span>
+          <span class="lang-en">Tell me what you're building and where you are. I'll reply with the next step.</span>
+          <span class="lang-es">Contame qué estás construyendo y en qué punto estás. Te respondo con el siguiente paso.</span>
         </p>
         <form class="inquiry" action="https://formspree.io/f/mzerjpgk" method="POST" accept-charset="UTF-8" aria-labelledby="inquiry-heading">
           <div class="inquiry-glow" aria-hidden="true"></div>
@@ -225,8 +235,8 @@
           <input class="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="inquiry-head">
             <h3 id="inquiry-heading">
-              <span class="lang-en">Tell me<br>your project</span>
-              <span class="lang-es">Contame<br>tu proyecto</span>
+              <span class="lang-en">Let's start</span>
+              <span class="lang-es">Empecemos</span>
             </h3>
           </div>
           <div class="field" data-field="name">
@@ -241,8 +251,8 @@
           <div class="field" data-field="contact">
             <label for="inquiry-contact">
               <span class="idx" aria-hidden="true">02</span>
-              <span class="lang-en">How to reach you (email, Signal or phone)</span>
-              <span class="lang-es">Cómo contactarte (correo, Signal o teléfono)</span>
+              <span class="lang-en">How to reach you</span>
+              <span class="lang-es">Cómo contactarte</span>
             </label>
             <input id="inquiry-contact" name="contact" type="text" required autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="inquiry-contact-error">
             <p class="field-error" id="inquiry-contact-error" data-error-for="contact" hidden></p>
@@ -260,8 +270,8 @@
             <legend>
               <span class="label-line">
                 <span class="idx" aria-hidden="true">04</span>
-                <span class="lang-en">Service of interest</span>
-                <span class="lang-es">Servicio que te interesa</span>
+                <span class="lang-en">Service</span>
+                <span class="lang-es">Servicio</span>
               </span>
             </legend>
             <div class="pills">
@@ -271,15 +281,15 @@
               </label>
               <label class="pill">
                 <input type="radio" name="service" value="Guided build" required>
-                <span class="pill-face"><span class="lang-en">Guided build</span><span class="lang-es">Acompañamiento</span></span>
+                <span class="pill-face"><span class="lang-en">Guided build</span><span class="lang-es">Construcción guiada</span></span>
               </label>
               <label class="pill">
-                <input type="radio" name="service" value="Turnkey development" required>
-                <span class="pill-face"><span class="lang-en">Turnkey development</span><span class="lang-es">Desarrollo llave en mano</span></span>
+                <input type="radio" name="service" value="Development" required>
+                <span class="pill-face"><span class="lang-en">Development</span><span class="lang-es">Desarrollo</span></span>
               </label>
               <label class="pill">
-                <input type="radio" name="service" value="Not sure" required>
-                <span class="pill-face"><span class="lang-en">Not sure</span><span class="lang-es">No estoy seguro</span></span>
+                <input type="radio" name="service" value="Not sure yet" required>
+                <span class="pill-face"><span class="lang-en">Not sure yet</span><span class="lang-es">No estoy seguro todavía</span></span>
               </label>
             </div>
             <p class="field-error" id="inquiry-service-error" data-error-for="service" hidden></p>

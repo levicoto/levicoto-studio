@@ -34,6 +34,14 @@
     if (twTitle && title) twTitle.setAttribute("content", title);
     var twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc && desc) twDesc.setAttribute("content", desc);
+    var ld = document.querySelector('script[type="application/ld+json"]');
+    if (ld && desc) {
+      try {
+        var data = JSON.parse(ld.textContent);
+        data.description = desc;
+        ld.textContent = JSON.stringify(data);
+      } catch (e) {}
+    }
     var menu = document.querySelector(".top-links");
     if (menu) menu.setAttribute("aria-label", lang === "es" ? "Secciones" : "Sections");
     if (switcher) {

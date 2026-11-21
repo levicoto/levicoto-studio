@@ -18,8 +18,8 @@ var SIGNAL_URL = "[signal]";
     var address = local + String.fromCharCode(64) + host;
     var subject = "Coto Studio";
     var body = current === "es"
-      ? "Qué estoy armando:\n\nOpción (sesión técnica, acompañamiento o desarrollo llave en mano):\n\n"
-      : "What I'm building:\n\nOption (technical session, guided build, or turnkey development):\n\n";
+      ? "Qué estoy construyendo:\n\nServicio:\n\n"
+      : "What I'm building:\n\nService:\n\n";
     return "mailto:" + address + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   }
 
